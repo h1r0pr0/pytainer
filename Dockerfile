@@ -4,7 +4,7 @@ ENV PYENV_ROOT /root/.pyenv
 ENV PATH /root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-ENV PYTHON_VERSION=3.9
+ENV PYTHON_VERSION=3.9.2
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -y && apt-get upgrade -y &&\
