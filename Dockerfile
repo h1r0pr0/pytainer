@@ -18,6 +18,7 @@ RUN apt-get update -y && apt-get upgrade -y &&\
     python3-dev \
     python3-pip \
     curl \
+    wget \
     git \
     build-essential \
     libssl-dev \
