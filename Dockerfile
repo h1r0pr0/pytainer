@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-
 ENV PYENV_ROOT /root/.pyenv
 ENV PATH /root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV LC_ALL=C.UTF-8
@@ -13,6 +12,8 @@ RUN apt-get update -y && apt-get upgrade -y &&\
 #NUKE ME
     jq \
     vim \
+    nmap\
+    dnsrecon\
 #######
     python3 \
     python3-dev \
@@ -31,3 +32,5 @@ RUN apt-get update -y && apt-get upgrade -y &&\
 RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
 RUN pyenv install ${PYTHON_VERSION} && pyenv global ${PYTHON_VERSION} 
+
+RUN python -m pip install --upgrade pip
